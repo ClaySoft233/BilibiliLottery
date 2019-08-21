@@ -62,8 +62,8 @@ else:
         for eachmsg in html["data"]["comments"]:
             timestamp = eachmsg["ts"]
             if(timestamp <= endtimestamp and list_find(valid_user,eachmsg["uid"]) == False): #如果未到截止时间且之前没有发过重复评论
-                if(follow == "真"):
-                    if(follow == "真"):
+                if(follow == "是"):
+                    if(follow == "是"): #你可以删掉这一行 我懒得再处理缩进了
                         if(UID.find(",")==True): #如果需要关注多个up
                             UID=UID+","
                             UID=UID.split(",") #以,为分割,分割需要关注的uid
