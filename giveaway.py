@@ -1,3 +1,8 @@
+# Author ClayCoffee(ClaySoft233)
+# GPL V3.0
+# 2019.8.21
+
+
 import requests
 import json
 import time
