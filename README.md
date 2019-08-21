@@ -1,4 +1,5 @@
 # BilibiliLottery
-The assistant tools for bilibili lottery.
-* require requests lib
-* require random lib
+A assistant tools for bilibili lottery.
+* requires requests lib
+* requires random lib
+* Supports only lottery for following users.
