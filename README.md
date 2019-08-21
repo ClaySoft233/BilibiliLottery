@@ -1,2 +1,4 @@
 # BilibiliLottery
-A essentials tool for bilibili lottery.
+The assistant tools for bilibili lottery.
+* require requests lib
+* require random lib
