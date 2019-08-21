@@ -69,10 +69,10 @@ else:
                             UID=UID.split(",") #以,为分割,分割需要关注的uid
                             valid == False
                             for pg in range(0,5):
-                                follow_list=json.loads(requests.get("https://api.bilibili.com/x/relation/followings?vmid="+eachmsg["uid"]+"&pn="+str(pg)).content.decode("UTF-8"))
+                                follow_list=json.loads(requests.get("https://api.bilibili.com/x/relation/followings?vmid="+str(eachmsg["uid"])+"&pn="+str(pg)).content.decode("UTF-8"))
                                 for eachuid in UID: #遍历每个需要关注的UID
                                     #获取用户的关注列表
-                                    if(follow_list["re_version"]!=""):
+                                    if(follow_list["data"]["re_version"]!=""):
                                         for eachfollow in follow_list["data"]["list"]:
                                             #遍历用户关注的人
                                             if(eachfollow["mid"] == eachuid and eachfollow["mtime"] <= endtimestamp):
@@ -89,9 +89,9 @@ else:
 
                         else:
                             for pg in range(0,5):
-                                follow_list=json.loads(requests.get("https://api.bilibili.com/x/relation/followings?vmid="+eachmsg["uid"]+"&pn="+str(pg)).content.decode("UTF-8"))
+                                follow_list=json.loads(requests.get("https://api.bilibili.com/x/relation/followings?vmid="+str(eachmsg["uid"])+"&pn="+str(pg)).content.decode("UTF-8"))
                                 #获取用户的关注列表
-                                if(follow_list["re_version"]!=""):
+                                if(follow_list["data"]["re_version"]!=""):
                                     for eachfollow in follow_list:
                                         if(eachfollow == UID):
                                             valid = True
