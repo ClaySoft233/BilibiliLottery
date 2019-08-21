@@ -21,7 +21,7 @@ count="5"
 follow="是"
 UID="161775300"
 if(follow == "是"):
-    UID = input('请输入那个用户的UID,多个请用","分割.')
+    #UID = input('请输入那个用户的UID,多个请用","分割.')
     if(UID == ""):
         print('请检查您的输入: UID错误')
         sys.exit()
@@ -121,9 +121,3 @@ else:
     if(strwillprint==""):
         strwillprint="没有符合条件的用户"
     print("随机抽奖完成!\r\n"+strwillprint)
-        
-            
-    #html=data.text
-    #bs = BeautifulSoup(html, "html.parser")
-    #comments=bs.select('div[id="app"] div div[class="detail_content"] div[class="detail-card"] div div')
-    
